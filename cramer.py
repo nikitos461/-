@@ -4,7 +4,7 @@ def cramer_method(matrix, vector):
         return None   
     n = len(matrix)
     det_A = np.linalg.det(matrix)
-    if abs(det_A) < 1e-10:
+    if dat_A == 0:
         return None
     solutions = []
     for i in range(n):
@@ -21,3 +21,8 @@ A = np.array([[5, -3], [2, 3]])  # Матрица коэффициентов
 B = np.array([17, 11])          # Вектор свободных членов
 solution = cramer_method(A, B)
 print(solution)
+
+
+#Если код переводится автоматически на русский, то нужно скачивать .py файл
+#Также, скорее всего из-за того, что идет работа с числами с плавающей точкой, получается какая-то погрешность
+#В связи с чем результаты получаются не точными, а максимально приближенными ¯\_(ツ)_/¯
