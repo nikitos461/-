@@ -11,8 +11,8 @@ def cramer_method(matrix, vector):
         A_i = matrix.copy()  # замена столбца на свободные члены
         A_i[:, i] = vector
         
-        det_i = np.linalg.det(A_i) # определитель после заемены
-        solutions.append(det_i / det_A) # добавление решения после заменs
+        det_i = np.linalg.det(A_i) # определитель после замены
+        solutions.append(det_i / det_A) # добавление решения после замены
     return solutions
 
 
